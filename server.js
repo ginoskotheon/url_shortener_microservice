@@ -43,14 +43,10 @@ app.get('/', function(req, res){
         "error": "No hobbits here."
         };
         res.send(result);
-<<<<<<< HEAD
+
     }  
 });
-=======
-    }
-    
-}
->>>>>>> origin/master
+
 
 //new/https://www.google.com
 
