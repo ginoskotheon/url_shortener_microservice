@@ -17,9 +17,9 @@ app.get('/', function(req, res){
 
 
 
- app.get('/:url', function (req, res){
+ app.get('/:url*', function (req, res){
     var home = "https://sleepy-savannah-67922.herokuapp.com/"
-    var url = req.url.slice(4);
+    var url = req.url.slice(3);
     var result = {};
     if(validateURL(url)){
         result = {
