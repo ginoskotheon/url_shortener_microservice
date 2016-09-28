@@ -24,8 +24,9 @@ app.get('/new/:url', function(req, res){
         result = {
         "error": "No hobbits here."
         };
+        res.send(result);
     }
-    res.send(result);
+    
 });
 
 function linkGen() {
