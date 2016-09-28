@@ -4,7 +4,7 @@ var http = require('http');
 var express = require("express");
 var app = express();
 var path = require('path');
-
+var APP_URL = 'http://localhost:5000/'
 
 app.set('port', (process.env.PORT || 8080));
 
