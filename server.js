@@ -19,6 +19,7 @@ app.get('/new/:url', function(req, res){
             "URL": url,
             "Hobbit URL": process.env.APP_URL + linkGen()
         };
+        res.send(result);
     }
     else {
         result = {
