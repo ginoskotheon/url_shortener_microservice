@@ -13,7 +13,10 @@ app.get('/', function(req, res){
 
 app.get('/:url', function(req, res){
     var url = req.url
-
+    var result = {
+        "URL": url
+    }
+    res.json(result);
 });
 
 
