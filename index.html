@@ -1,22 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Timestamp microservice</title>
+    <title>URL Shortener microservice</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
     <div class="jumbotron">
         <div class="container">
-            <h1 class="text-center">API Basejump: Timestamp microservice</h1>
+            <h1 class="text-center">API Basejump: URL Shortener microservice</h1>
         </div>
     </div>
     <div class="container">
         <div style="font-size: 1.4em;">
-            <p>You can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)</p>
-            <p>If it does, it returns both the Unix timestamp and the natural language form of that date.</p>
-            <p>If it does not contain a date or Unix timestamp, it returns null for those properties.</p>
+            <p>User stories:</p>
+            <p>I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</p>
+            <p>When I visit that shortened URL, it will redirect me to my original link.</p>
             <br>
         </div>
     </div>
@@ -24,16 +23,22 @@
         <div class="container">
             <div style="font-size: 1.4em;">
                 <h3>Example usage:</h3>
-                <code>https://timestamp-microservice-rohanimmanuel.c9users.io/December%2015,%202015</code><br>
-                <code>https://timestamp-microservice-rohanimmanuel.c9users.io/1450137600</code>
+                <code>https://little-url.herokuapp.com/new/https://www.google.com</code><br>
+                <code>https://little-url.herokuapp.com/new/http://foo.com:80</code>
                 <h3>Example output:</h3>
                 <code>
-                    {
-                      "unix": 1450137600,
-                      "natural": "December 15, 2015"
-                    }
+                    { "original_url":"http://foo.com:80", "short_url":"https://little-url.herokuapp.com/8170" }
+                </code>
+                <h3>Usage</h3>
+                <code>
+                    https://little-url.herokuapp.com/2871
+                </code>
+                <h3>Will Redirect To:</h3>
+                <code>
+                    https://www.google.com/
                 </code>
             </div>
+            
         </div>
     </div>
 </body>
