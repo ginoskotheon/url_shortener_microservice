@@ -4,7 +4,7 @@ var http = require('http');
 var express = require("express");
 var app = express();
 var path = require('path');
-var APP_URL = 'http://localhost:5000/';
+
 
 app.set('port', (process.env.PORT || 8080));
 
@@ -21,7 +21,16 @@ app.get('/new/:url*', function(req, res){
             "URL": url,
             "Hobbit URL": process.env.APP_URL + linkGen()
         };
-        res.send(result);
+        // res.send(result);
+        res.send(
+        "<html>" +
+        "<head><title>Request Header Parser</title></head>" +
+        "<body>" +
+        "<h1>Request Header Parser</h1>" +
+        JSON.stringify(result) + 
+        "</body>" +
+        "</html>"
+        );
     }
     else {
         result = {
