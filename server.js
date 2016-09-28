@@ -17,7 +17,7 @@ app.get('/', function(req, res){
 
 app.route('/:url')
 
-app.get('/new/:url*', function(req, res){
+    .get('/new/:url*', function(req, res){
     var home = "https://sleepy-savannah-67922.herokuapp.com/"
     var url = req.url.slice(5);
     var result = {};
