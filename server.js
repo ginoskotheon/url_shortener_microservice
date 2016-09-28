@@ -24,10 +24,11 @@ app.get('/new/:url*', function(req, res){
         // res.send(result);
         res.send(
         "<html>" +
-        "<head><title>Request Header Parser</title></head>" +
+        "<head><title>Request URL Microservice</title></head>" +
         "<body>" +
         "<h1>Request Header Parser</h1>" +
-        JSON.stringify(result) + 
+       "<p>" + JSON.stringify(result["URL"]) + "</p>" +
+       "<p>" + JSON.stringify(result["Hobbit URL"]) + "<a href='"+ JSON.stringify(result["URL"]) +"'> </a></p>" +
         "</body>" +
         "</html>"
         );
