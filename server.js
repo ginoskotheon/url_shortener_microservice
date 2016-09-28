@@ -47,7 +47,7 @@ app.route('/:url')
         res.send(result);
     }
     
-});
+}
 
 //new/https://www.google.com
 
