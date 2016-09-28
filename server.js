@@ -45,9 +45,8 @@ app.route('/:url')
         "error": "No hobbits here."
         };
         res.send(result);
-    }
-    
-});
+    }  
+}
 
 //new/https://www.google.com
 
