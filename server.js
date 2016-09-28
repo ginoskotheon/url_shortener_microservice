@@ -28,7 +28,7 @@ app.get('/new/:url*', function(req, res){
         "<body>" +
         "<h1>Request Header Parser</h1>" +
        "<p>" + JSON.stringify(result["URL"]) + "</p>" +
-       "<p>" + JSON.stringify(result["Hobbit URL"]) + "<a href='"+ JSON.stringify(result["URL"]) +"'> </a></p>" +
+       "<p> <a href='"+ JSON.stringify(result["URL"]) +"'>"+ JSON.stringify(result["Hobbit URL"]) +  "</a></p>" +
         "</body>" +
         "</html>"
         );
