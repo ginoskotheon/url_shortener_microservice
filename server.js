@@ -15,11 +15,9 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname+'/index.html'));
 });
 
-app.route('/:url')
 
-    .get('/new/:url*', takeAction);
 
- function takeAction (req, res){
+ app.get('/:url*', function (req, res){
     var home = "https://sleepy-savannah-67922.herokuapp.com/"
     var url = req.url.slice(5);
     var result = {};
@@ -46,7 +44,7 @@ app.route('/:url')
         };
         res.send(result);
     }  
-}
+});
 
 //new/https://www.google.com
 
