@@ -9,9 +9,13 @@ var path = require('path');
 app.set('port', (process.env.PORT || 8080));
 
 
+
+
 app.get('/', function(req, res){
     res.sendFile(path.join(__dirname+'/index.html'));
 });
+
+app.route('/:url')
 
 app.get('/new/:url*', function(req, res){
     var home = "https://sleepy-savannah-67922.herokuapp.com/"
