@@ -27,8 +27,8 @@ app.get('/new/:url*', function(req, res){
         "<head><title>Request URL Microservice</title></head>" +
         "<body>" +
         "<h1>Request Header Parser</h1>" +
-       "<p>" + JSON.stringify(result["URL"]) + "</p>" +
-       "<p> <a href='"+ url +"'>"+ JSON.stringify(result["Hobbit URL"]) +  "</a></p>" +
+       "<p> URL: " + JSON.stringify(result["URL"]) + "</p>" +
+       "<p>Hobbit URL: <a href='"+ url +"'>"+ JSON.stringify(result["Hobbit URL"]) +  "</a></p>" +
         "</body>" +
         "</html>"
         );
