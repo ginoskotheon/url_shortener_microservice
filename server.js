@@ -1,3 +1,5 @@
+'use strict';
+
 var http = require('http');
 var express = require("express");
 var app = express();
@@ -11,7 +13,7 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname+'/index.html'));
 });
 
-app.get('/new/:url', function(req, res){
+app.get('/new/:url*', function(req, res){
     var url = req.url.slice(5);
     var result = {};
     if(validateURL(url)){
