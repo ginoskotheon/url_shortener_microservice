@@ -17,9 +17,9 @@ app.get('/', function(req, res){
 
 
 
- app.get('/:url', function (req, res){
+ app.get('/:url*', function (req, res){
     var home = "https://sleepy-savannah-67922.herokuapp.com/"
-    var url = req.url.slice(3);
+    var url = req.url.slice(5);
     var result = {};
     if(validateURL(url)){
         result = {
@@ -40,7 +40,8 @@ app.get('/', function(req, res){
     }
     else {
         result = {
-        "error": "No hobbits here."
+        "error": "No hobbits here.",
+        "URL": url
         };
         res.send(result);
 
