@@ -17,7 +17,7 @@ app.get('/new/:url', function(req, res){
     if(validateURL(url)){
         result = {
             "URL": url,
-            "Hobbit URL": process.env.APP_URL + linkGen()
+            // "Hobbit URL": process.env.APP_URL + linkGen()
         };
         res.send(result);
     }
@@ -29,6 +29,8 @@ app.get('/new/:url', function(req, res){
     }
     
 });
+
+//new/https://www.google.com
 
 function linkGen() {
     var num = Math.floor(100000 + Math.random() * 900000);
