@@ -14,12 +14,13 @@ app.get('/', function(req, res){
 });
 
 app.get('/new/:url*', function(req, res){
+    var home = "https://sleepy-savannah-67922.herokuapp.com/"
     var url = req.url.slice(5);
     var result = {};
     if(validateURL(url)){
         result = {
             "URL": url,
-            "Hobbit URL": process.env.APP_URL + linkGen()
+            "Hobbit URL": home + linkGen()
         };
         // res.send(result);
         res.send(
