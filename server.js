@@ -11,12 +11,12 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname+'/index.html'));
 });
 
-app.get('/:url', function(req, res){
-    var url = req.url
+app.get('/new/:url', function(req, res){
+    var url = req.url.slice(5);
     var result = {
         "URL": url
     }
-    res.json(result);
+    res.send(result);
 });
 
 
