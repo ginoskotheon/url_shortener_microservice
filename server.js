@@ -15,9 +15,11 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname+'/index.html'));
 });
 
-app.route('/:url');
+app.route('/:url')
 
-app.get('/new/:url*', function(req, res){
+    .get('/new/:url*', takeAction);
+
+ function takeAction (req, res){
     var home = "https://sleepy-savannah-67922.herokuapp.com/"
     var url = req.url.slice(5);
     var result = {};
