@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ginoskotheon/url_shortener_microservice/issues"
   },
-  "homepage": "https://github.com/ginoskotheon/url_shortener_microservice#readme"
+  "homepage": "https://github.com/ginoskotheon/url_shortener_microservice#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
